@@ -1,0 +1,11 @@
+[Unit]
+Description=frp client
+After=network.target
+
+[Service]
+ExecStart=/opt/frp/frpc -c /opt/frp/frpc.ini
+RestartSec=5
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
