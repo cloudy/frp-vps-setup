@@ -11,7 +11,9 @@ else
     echo "Installing Go..."
     sudo add-apt-repository ppa:gophers/archive
     sudo apt update
-    sudo apt-get install golang-1.9-go
+    sudo apt-get install golang-1.9
+    echo PATH="$PATH:/usr/lib/go-1.9/bin" | sudo tee /etc/environment
+    source /etc/environment
 fi
 
 if [ -z "$GOPATH" ]; then
