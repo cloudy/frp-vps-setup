@@ -9,10 +9,10 @@ if hash go 2>/dev/null; then
     echo "Go found"
 else
     echo "Installing Go..."
-    sudo add-apt-repository ppa:gophers/archive -y
+    sudo add-apt-repository ppa:longsleep/golang-backports -y 
     sudo apt update
-    sudo apt-get install golang-1.9 -y
-    echo PATH="$PATH:/usr/lib/go-1.9/bin" | sudo tee /etc/environment
+    sudo apt-get install golang-1.12 -y
+    echo PATH="$PATH:/usr/lib/go-1.12/bin" | sudo tee /etc/environment
     source /etc/environment
 fi
 
